@@ -1,0 +1,274 @@
+
+GET name,region,sub region and population:
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET","https://restcountries.eu/rest/v2/all");
+
+xhr.onload = function(){
+    
+        var t = JSON.parse(this.response);
+        t.forEach(function(element){
+            console.log("NAME:",element.name,",","REGION:",element.region,",","SUB-REGION:",element.subregion,",","POPULATION:",element.population);
+        });
+    };
+    xhr.onerror = function(){
+        console.log("Error: " + this.statusText);
+    };
+
+
+
+xhr.send();
+
+
+OUTPUT:
+
+NAME: Afghanistan , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 27657145
+script.js:8 NAME: Åland Islands , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 28875
+script.js:8 NAME: Albania , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 2886026
+script.js:8 NAME: Algeria , REGION: Africa , SUB-REGION: Northern Africa , POPULATION: 40400000
+script.js:8 NAME: American Samoa , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 57100
+script.js:8 NAME: Andorra , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 78014
+script.js:8 NAME: Angola , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 25868000
+script.js:8 NAME: Anguilla , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 13452
+script.js:8 NAME: Antarctica , REGION: Polar , SUB-REGION:  , POPULATION: 1000
+script.js:8 NAME: Antigua and Barbuda , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 86295
+script.js:8 NAME: Argentina , REGION: Americas , SUB-REGION: South America , POPULATION: 43590400
+script.js:8 NAME: Armenia , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 2994400
+script.js:8 NAME: Aruba , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 107394
+script.js:8 NAME: Australia , REGION: Oceania , SUB-REGION: Australia and New Zealand , POPULATION: 24117360
+script.js:8 NAME: Austria , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 8725931
+script.js:8 NAME: Azerbaijan , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 9730500
+script.js:8 NAME: Bahamas , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 378040
+script.js:8 NAME: Bahrain , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 1404900
+script.js:8 NAME: Bangladesh , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 161006790
+script.js:8 NAME: Barbados , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 285000
+script.js:8 NAME: Belarus , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 9498700
+script.js:8 NAME: Belgium , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 11319511
+script.js:8 NAME: Belize , REGION: Americas , SUB-REGION: Central America , POPULATION: 370300
+script.js:8 NAME: Benin , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 10653654
+script.js:8 NAME: Bermuda , REGION: Americas , SUB-REGION: Northern America , POPULATION: 61954
+script.js:8 NAME: Bhutan , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 775620
+script.js:8 NAME: Bolivia (Plurinational State of) , REGION: Americas , SUB-REGION: South America , POPULATION: 10985059
+script.js:8 NAME: Bonaire, Sint Eustatius and Saba , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 17408
+script.js:8 NAME: Bosnia and Herzegovina , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 3531159
+script.js:8 NAME: Botswana , REGION: Africa , SUB-REGION: Southern Africa , POPULATION: 2141206
+script.js:8 NAME: Bouvet Island , REGION:  , SUB-REGION:  , POPULATION: 0
+script.js:8 NAME: Brazil , REGION: Americas , SUB-REGION: South America , POPULATION: 206135893
+script.js:8 NAME: British Indian Ocean Territory , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 3000
+script.js:8 NAME: United States Minor Outlying Islands , REGION: Americas , SUB-REGION: Northern America , POPULATION: 300
+script.js:8 NAME: Virgin Islands (British) , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 28514
+script.js:8 NAME: Virgin Islands (U.S.) , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 114743
+script.js:8 NAME: Brunei Darussalam , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 411900
+script.js:8 NAME: Bulgaria , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 7153784
+script.js:8 NAME: Burkina Faso , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 19034397
+script.js:8 NAME: Burundi , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 10114505
+script.js:8 NAME: Cambodia , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 15626444
+script.js:8 NAME: Cameroon , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 22709892
+script.js:8 NAME: Canada , REGION: Americas , SUB-REGION: Northern America , POPULATION: 36155487
+script.js:8 NAME: Cabo Verde , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 531239
+script.js:8 NAME: Cayman Islands , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 58238
+script.js:8 NAME: Central African Republic , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 4998000
+script.js:8 NAME: Chad , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 14497000
+script.js:8 NAME: Chile , REGION: Americas , SUB-REGION: South America , POPULATION: 18191900
+script.js:8 NAME: China , REGION: Asia , SUB-REGION: Eastern Asia , POPULATION: 1377422166
+script.js:8 NAME: Christmas Island , REGION: Oceania , SUB-REGION: Australia and New Zealand , POPULATION: 2072
+script.js:8 NAME: Cocos (Keeling) Islands , REGION: Oceania , SUB-REGION: Australia and New Zealand , POPULATION: 550
+script.js:8 NAME: Colombia , REGION: Americas , SUB-REGION: South America , POPULATION: 48759958
+script.js:8 NAME: Comoros , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 806153
+script.js:8 NAME: Congo , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 4741000
+script.js:8 NAME: Congo (Democratic Republic of the) , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 85026000
+script.js:8 NAME: Cook Islands , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 18100
+script.js:8 NAME: Costa Rica , REGION: Americas , SUB-REGION: Central America , POPULATION: 4890379
+script.js:8 NAME: Croatia , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 4190669
+script.js:8 NAME: Cuba , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 11239004
+script.js:8 NAME: Curaçao , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 154843
+script.js:8 NAME: Cyprus , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 847000
+script.js:8 NAME: Czech Republic , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 10558524
+script.js:8 NAME: Denmark , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 5717014
+script.js:8 NAME: Djibouti , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 900000
+script.js:8 NAME: Dominica , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 71293
+script.js:8 NAME: Dominican Republic , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 10075045
+script.js:8 NAME: Ecuador , REGION: Americas , SUB-REGION: South America , POPULATION: 16545799
+script.js:8 NAME: Egypt , REGION: Africa , SUB-REGION: Northern Africa , POPULATION: 91290000
+script.js:8 NAME: El Salvador , REGION: Americas , SUB-REGION: Central America , POPULATION: 6520675
+script.js:8 NAME: Equatorial Guinea , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 1222442
+script.js:8 NAME: Eritrea , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 5352000
+script.js:8 NAME: Estonia , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 1315944
+script.js:8 NAME: Ethiopia , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 92206005
+script.js:8 NAME: Falkland Islands (Malvinas) , REGION: Americas , SUB-REGION: South America , POPULATION: 2563
+script.js:8 NAME: Faroe Islands , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 49376
+script.js:8 NAME: Fiji , REGION: Oceania , SUB-REGION: Melanesia , POPULATION: 867000
+script.js:8 NAME: Finland , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 5491817
+script.js:8 NAME: France , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 66710000
+script.js:8 NAME: French Guiana , REGION: Americas , SUB-REGION: South America , POPULATION: 254541
+script.js:8 NAME: French Polynesia , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 271800
+script.js:8 NAME: French Southern Territories , REGION: Africa , SUB-REGION: Southern Africa , POPULATION: 140
+script.js:8 NAME: Gabon , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 1802278
+script.js:8 NAME: Gambia , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 1882450
+script.js:8 NAME: Georgia , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 3720400
+script.js:8 NAME: Germany , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 81770900
+script.js:8 NAME: Ghana , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 27670174
+script.js:8 NAME: Gibraltar , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 33140
+script.js:8 NAME: Greece , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 10858018
+script.js:8 NAME: Greenland , REGION: Americas , SUB-REGION: Northern America , POPULATION: 55847
+script.js:8 NAME: Grenada , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 103328
+script.js:8 NAME: Guadeloupe , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 400132
+script.js:8 NAME: Guam , REGION: Oceania , SUB-REGION: Micronesia , POPULATION: 184200
+script.js:8 NAME: Guatemala , REGION: Americas , SUB-REGION: Central America , POPULATION: 16176133
+script.js:8 NAME: Guernsey , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 62999
+script.js:8 NAME: Guinea , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 12947000
+script.js:8 NAME: Guinea-Bissau , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 1547777
+script.js:8 NAME: Guyana , REGION: Americas , SUB-REGION: South America , POPULATION: 746900
+script.js:8 NAME: Haiti , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 11078033
+script.js:8 NAME: Heard Island and McDonald Islands , REGION:  , SUB-REGION:  , POPULATION: 0
+script.js:8 NAME: Holy See , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 451
+script.js:8 NAME: Honduras , REGION: Americas , SUB-REGION: Central America , POPULATION: 8576532
+script.js:8 NAME: Hong Kong , REGION: Asia , SUB-REGION: Eastern Asia , POPULATION: 7324300
+script.js:8 NAME: Hungary , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 9823000
+script.js:8 NAME: Iceland , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 334300
+script.js:8 NAME: India , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 1295210000
+script.js:8 NAME: Indonesia , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 258705000
+script.js:8 NAME: Côte d'Ivoire , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 22671331
+script.js:8 NAME: Iran (Islamic Republic of) , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 79369900
+script.js:8 NAME: Iraq , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 37883543
+script.js:8 NAME: Ireland , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 6378000
+script.js:8 NAME: Isle of Man , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 84497
+script.js:8 NAME: Israel , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 8527400
+script.js:8 NAME: Italy , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 60665551
+script.js:8 NAME: Jamaica , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 2723246
+script.js:8 NAME: Japan , REGION: Asia , SUB-REGION: Eastern Asia , POPULATION: 126960000
+script.js:8 NAME: Jersey , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 100800
+script.js:8 NAME: Jordan , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 9531712
+script.js:8 NAME: Kazakhstan , REGION: Asia , SUB-REGION: Central Asia , POPULATION: 17753200
+script.js:8 NAME: Kenya , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 47251000
+script.js:8 NAME: Kiribati , REGION: Oceania , SUB-REGION: Micronesia , POPULATION: 113400
+script.js:8 NAME: Kuwait , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 4183658
+script.js:8 NAME: Kyrgyzstan , REGION: Asia , SUB-REGION: Central Asia , POPULATION: 6047800
+script.js:8 NAME: Lao People's Democratic Republic , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 6492400
+script.js:8 NAME: Latvia , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 1961600
+script.js:8 NAME: Lebanon , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 5988000
+script.js:8 NAME: Lesotho , REGION: Africa , SUB-REGION: Southern Africa , POPULATION: 1894194
+script.js:8 NAME: Liberia , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 4615000
+script.js:8 NAME: Libya , REGION: Africa , SUB-REGION: Northern Africa , POPULATION: 6385000
+script.js:8 NAME: Liechtenstein , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 37623
+script.js:8 NAME: Lithuania , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 2872294
+script.js:8 NAME: Luxembourg , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 576200
+script.js:8 NAME: Macao , REGION: Asia , SUB-REGION: Eastern Asia , POPULATION: 649100
+script.js:8 NAME: Macedonia (the former Yugoslav Republic of) , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 2058539
+script.js:8 NAME: Madagascar , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 22434363
+script.js:8 NAME: Malawi , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 16832910
+script.js:8 NAME: Malaysia , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 31405416
+script.js:8 NAME: Maldives , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 344023
+script.js:8 NAME: Mali , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 18135000
+script.js:8 NAME: Malta , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 425384
+script.js:8 NAME: Marshall Islands , REGION: Oceania , SUB-REGION: Micronesia , POPULATION: 54880
+script.js:8 NAME: Martinique , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 378243
+script.js:8 NAME: Mauritania , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 3718678
+script.js:8 NAME: Mauritius , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 1262879
+script.js:8 NAME: Mayotte , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 226915
+script.js:8 NAME: Mexico , REGION: Americas , SUB-REGION: Central America , POPULATION: 122273473
+script.js:8 NAME: Micronesia (Federated States of) , REGION: Oceania , SUB-REGION: Micronesia , POPULATION: 102800
+script.js:8 NAME: Moldova (Republic of) , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 3553100
+script.js:8 NAME: Monaco , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 38400
+script.js:8 NAME: Mongolia , REGION: Asia , SUB-REGION: Eastern Asia , POPULATION: 3093100
+script.js:8 NAME: Montenegro , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 621810
+script.js:8 NAME: Montserrat , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 4922
+script.js:8 NAME: Morocco , REGION: Africa , SUB-REGION: Northern Africa , POPULATION: 33337529
+script.js:8 NAME: Mozambique , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 26423700
+script.js:8 NAME: Myanmar , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 51419420
+script.js:8 NAME: Namibia , REGION: Africa , SUB-REGION: Southern Africa , POPULATION: 2324388
+script.js:8 NAME: Nauru , REGION: Oceania , SUB-REGION: Micronesia , POPULATION: 10084
+script.js:8 NAME: Nepal , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 28431500
+script.js:8 NAME: Netherlands , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 17019800
+script.js:8 NAME: New Caledonia , REGION: Oceania , SUB-REGION: Melanesia , POPULATION: 268767
+script.js:8 NAME: New Zealand , REGION: Oceania , SUB-REGION: Australia and New Zealand , POPULATION: 4697854
+script.js:8 NAME: Nicaragua , REGION: Americas , SUB-REGION: Central America , POPULATION: 6262703
+script.js:8 NAME: Niger , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 20715000
+script.js:8 NAME: Nigeria , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 186988000
+script.js:8 NAME: Niue , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 1470
+script.js:8 NAME: Norfolk Island , REGION: Oceania , SUB-REGION: Australia and New Zealand , POPULATION: 2302
+script.js:8 NAME: Korea (Democratic People's Republic of) , REGION: Asia , SUB-REGION: Eastern Asia , POPULATION: 25281000
+script.js:8 NAME: Northern Mariana Islands , REGION: Oceania , SUB-REGION: Micronesia , POPULATION: 56940
+script.js:8 NAME: Norway , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 5223256
+script.js:8 NAME: Oman , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 4420133
+script.js:8 NAME: Pakistan , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 194125062
+script.js:8 NAME: Palau , REGION: Oceania , SUB-REGION: Micronesia , POPULATION: 17950
+script.js:8 NAME: Palestine, State of , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 4682467
+script.js:8 NAME: Panama , REGION: Americas , SUB-REGION: Central America , POPULATION: 3814672
+script.js:8 NAME: Papua New Guinea , REGION: Oceania , SUB-REGION: Melanesia , POPULATION: 8083700
+script.js:8 NAME: Paraguay , REGION: Americas , SUB-REGION: South America , POPULATION: 6854536
+script.js:8 NAME: Peru , REGION: Americas , SUB-REGION: South America , POPULATION: 31488700
+script.js:8 NAME: Philippines , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 103279800
+script.js:8 NAME: Pitcairn , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 56
+script.js:8 NAME: Poland , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 38437239
+script.js:8 NAME: Portugal , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 10374822
+script.js:8 NAME: Puerto Rico , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 3474182
+script.js:8 NAME: Qatar , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 2587564
+script.js:8 NAME: Republic of Kosovo , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 1733842
+script.js:8 NAME: Réunion , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 840974
+script.js:8 NAME: Romania , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 19861408
+script.js:8 NAME: Russian Federation , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 146599183
+script.js:8 NAME: Rwanda , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 11553188
+script.js:8 NAME: Saint Barthélemy , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 9417
+script.js:8 NAME: Saint Helena, Ascension and Tristan da Cunha , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 4255
+script.js:8 NAME: Saint Kitts and Nevis , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 46204
+script.js:8 NAME: Saint Lucia , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 186000
+script.js:8 NAME: Saint Martin (French part) , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 36979
+script.js:8 NAME: Saint Pierre and Miquelon , REGION: Americas , SUB-REGION: Northern America , POPULATION: 6069
+script.js:8 NAME: Saint Vincent and the Grenadines , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 109991
+script.js:8 NAME: Samoa , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 194899
+script.js:8 NAME: San Marino , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 33005
+script.js:8 NAME: Sao Tome and Principe , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 187356
+script.js:8 NAME: Saudi Arabia , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 32248200
+script.js:8 NAME: Senegal , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 14799859
+script.js:8 NAME: Serbia , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 7076372
+script.js:8 NAME: Seychelles , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 91400
+script.js:8 NAME: Sierra Leone , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 7075641
+script.js:8 NAME: Singapore , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 5535000
+script.js:8 NAME: Sint Maarten (Dutch part) , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 38247
+script.js:8 NAME: Slovakia , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 5426252
+script.js:8 NAME: Slovenia , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 2064188
+script.js:8 NAME: Solomon Islands , REGION: Oceania , SUB-REGION: Melanesia , POPULATION: 642000
+script.js:8 NAME: Somalia , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 11079000
+script.js:8 NAME: South Africa , REGION: Africa , SUB-REGION: Southern Africa , POPULATION: 55653654
+script.js:8 NAME: South Georgia and the South Sandwich Islands , REGION: Americas , SUB-REGION: South America , POPULATION: 30
+script.js:8 NAME: Korea (Republic of) , REGION: Asia , SUB-REGION: Eastern Asia , POPULATION: 50801405
+script.js:8 NAME: South Sudan , REGION: Africa , SUB-REGION: Middle Africa , POPULATION: 12131000
+script.js:8 NAME: Spain , REGION: Europe , SUB-REGION: Southern Europe , POPULATION: 46438422
+script.js:8 NAME: Sri Lanka , REGION: Asia , SUB-REGION: Southern Asia , POPULATION: 20966000
+script.js:8 NAME: Sudan , REGION: Africa , SUB-REGION: Northern Africa , POPULATION: 39598700
+script.js:8 NAME: Suriname , REGION: Americas , SUB-REGION: South America , POPULATION: 541638
+script.js:8 NAME: Svalbard and Jan Mayen , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 2562
+script.js:8 NAME: Swaziland , REGION: Africa , SUB-REGION: Southern Africa , POPULATION: 1132657
+script.js:8 NAME: Sweden , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 9894888
+script.js:8 NAME: Switzerland , REGION: Europe , SUB-REGION: Western Europe , POPULATION: 8341600
+script.js:8 NAME: Syrian Arab Republic , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 18564000
+script.js:8 NAME: Taiwan , REGION: Asia , SUB-REGION: Eastern Asia , POPULATION: 23503349
+script.js:8 NAME: Tajikistan , REGION: Asia , SUB-REGION: Central Asia , POPULATION: 8593600
+script.js:8 NAME: Tanzania, United Republic of , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 55155000
+script.js:8 NAME: Thailand , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 65327652
+script.js:8 NAME: Timor-Leste , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 1167242
+script.js:8 NAME: Togo , REGION: Africa , SUB-REGION: Western Africa , POPULATION: 7143000
+script.js:8 NAME: Tokelau , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 1411
+script.js:8 NAME: Tonga , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 103252
+script.js:8 NAME: Trinidad and Tobago , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 1349667
+script.js:8 NAME: Tunisia , REGION: Africa , SUB-REGION: Northern Africa , POPULATION: 11154400
+script.js:8 NAME: Turkey , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 78741053
+script.js:8 NAME: Turkmenistan , REGION: Asia , SUB-REGION: Central Asia , POPULATION: 4751120
+script.js:8 NAME: Turks and Caicos Islands , REGION: Americas , SUB-REGION: Caribbean , POPULATION: 31458
+script.js:8 NAME: Tuvalu , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 10640
+script.js:8 NAME: Uganda , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 33860700
+script.js:8 NAME: Ukraine , REGION: Europe , SUB-REGION: Eastern Europe , POPULATION: 42692393
+script.js:8 NAME: United Arab Emirates , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 9856000
+script.js:8 NAME: United Kingdom of Great Britain and Northern Ireland , REGION: Europe , SUB-REGION: Northern Europe , POPULATION: 65110000
+script.js:8 NAME: United States of America , REGION: Americas , SUB-REGION: Northern America , POPULATION: 323947000
+script.js:8 NAME: Uruguay , REGION: Americas , SUB-REGION: South America , POPULATION: 3480222
+script.js:8 NAME: Uzbekistan , REGION: Asia , SUB-REGION: Central Asia , POPULATION: 31576400
+script.js:8 NAME: Vanuatu , REGION: Oceania , SUB-REGION: Melanesia , POPULATION: 277500
+script.js:8 NAME: Venezuela (Bolivarian Republic of) , REGION: Americas , SUB-REGION: South America , POPULATION: 31028700
+script.js:8 NAME: Viet Nam , REGION: Asia , SUB-REGION: South-Eastern Asia , POPULATION: 92700000
+script.js:8 NAME: Wallis and Futuna , REGION: Oceania , SUB-REGION: Polynesia , POPULATION: 11750
+script.js:8 NAME: Western Sahara , REGION: Africa , SUB-REGION: Northern Africa , POPULATION: 510713
+script.js:8 NAME: Yemen , REGION: Asia , SUB-REGION: Western Asia , POPULATION: 27478000
+script.js:8 NAME: Zambia , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 15933883
+script.js:8 NAME: Zimbabwe , REGION: Africa , SUB-REGION: Eastern Africa , POPULATION: 14240168
